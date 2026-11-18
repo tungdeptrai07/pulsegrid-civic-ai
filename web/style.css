@@ -1,0 +1,38 @@
+:root {
+  --bg: #070b10;
+  --card: #101723;
+  --border: #1e2d42;
+  --text: #eaf1fb;
+  --muted: #8ea2be;
+  --accent: #06b6d4;
+  --ok: #22c55e;
+  --crit: #ef4444;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--text); }
+.topbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 28px; background: #0b111c; border-bottom: 1px solid var(--border); }
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo { width: 34px; height: 34px; border-radius: 8px; background: var(--accent); color: #041317; font-weight: 800; display: grid; place-items: center; }
+h1 { margin: 0; font-size: 1.2rem; }
+h2 { margin: 0 0 12px; font-size: 0.98rem; }
+.subtitle { margin: 0; font-size: 0.82rem; color: var(--muted); }
+.pills { display: flex; gap: 8px; }
+.pill { padding: 5px 12px; border-radius: 999px; font-size: 0.8rem; background: #162133; border: 1px solid var(--border); }
+.container { max-width: 1200px; margin: 22px auto; padding: 0 20px 40px; display: grid; gap: 20px; }
+.grid-two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 900px) { .grid-two { grid-template-columns: 1fr; } }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+.form-stack, .stack { display: grid; gap: 10px; }
+.row-two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.row-three { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+label { font-size: 0.78rem; color: var(--muted); display: grid; gap: 4px; }
+input, select { background: #090e17; color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font: inherit; }
+.btn { background: #1a263a; color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; cursor: pointer; font-weight: 600; font-size: 0.82rem; }
+.btn.primary { background: var(--accent); color: #041317; border-color: var(--accent); }
+.btn.ok { background: var(--ok); color: #04130b; border-color: var(--ok); }
+.item-box { background: #090e17; border: 1px solid var(--border); border-radius: 8px; padding: 11px; font-size: 0.83rem; }
+.row-between { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.ok { color: var(--ok); font-weight: 600; }
+.crit { color: var(--crit); font-weight: 700; }
+.muted { color: var(--muted); }
