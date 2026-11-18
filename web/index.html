@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PulseGrid AI — Civic Telemetry &amp; Emergency Triage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">P</div>
+      <div>
+        <h1>PulseGrid Civic AI</h1>
+        <p class="subtitle">HackOdisha 6.0 · Real-Time Urban Telemetry Triage &amp; Specialty Dispatch</p>
+      </div>
+    </div>
+    <div class="pills">
+      <span id="openPill" class="pill">Open: 0</span>
+      <span id="unitsPill" class="pill ok">Units Ready: 4</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid-two">
+      <article class="card">
+        <h2>1. Report / Ingest Sensor Anomaly</h2>
+        <div class="form-stack">
+          <div class="row-two">
+            <label>
+              Zone
+              <input id="zoneInput" type="text" value="Central District" />
+            </label>
+            <label>
+              Hazard Type
+              <select id="hazardInput">
+                <option value="MEDICAL_EMERGENCY">MEDICAL_EMERGENCY</option>
+                <option value="FLOOD_SURGE">FLOOD_SURGE</option>
+                <option value="POWER_GRID_OVERLOAD">POWER_GRID_OVERLOAD</option>
+                <option value="WATER_QUALITY_DROP">WATER_QUALITY_DROP</option>
+                <option value="TRAFFIC_BOTTLENECK">TRAFFIC_BOTTLENECK</option>
+              </select>
+            </label>
+          </div>
+          <div class="row-three">
+            <label>Reading <input id="readInput" type="number" value="155" /></label>
+            <label>Threshold <input id="threshInput" type="number" value="100" /></label>
+            <label>Population <input id="popInput" type="number" value="14000" /></label>
+          </div>
+          <button id="ingestBtn" type="button" class="btn primary">Score &amp; Queue Incident</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>2. Response Units &amp; Dispatch Audit Log</h2>
+        <div id="unitsList" class="stack"></div>
+        <div id="logList" class="stack" style="margin-top:10px"></div>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>3. Prioritized Civic Incident Queue</h2>
+      <div id="incidentsList" class="stack"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
